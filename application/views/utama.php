@@ -7,7 +7,7 @@
 		</ol>
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<img src="<?= base_url()?>/assets/img/home1.jpg" width="100%" height="585vh">
+				<img src="<?= base_url()?>/assets/img/home1.jpg" width="100%" height="655vh">
 				<div class="container">
 					<div class="carousel-caption text-right">
 						<h1>Example headline.</h1>
@@ -18,7 +18,7 @@
 				</div>
 			</div>
 			<div class="carousel-item">
-				<img src="<?= base_url()?>/assets/img/home2.jpg" width="100%" height="585vh">
+				<img src="<?= base_url()?>/assets/img/home2.jpg" width="100%" height="655vh">
 				<div class="container">
 					<div class="carousel-caption text-left">
 						<h1>Another example headline.</h1>
@@ -29,7 +29,7 @@
 				</div>
 			</div>
 			<div class="carousel-item">
-				<img src="<?= base_url()?>/assets/img/home3.jpg" width="100%" height="585vh">
+				<img src="<?= base_url()?>/assets/img/home3.jpg" width="100%" height="655vh">
 				<div class="container">
 					<div class="carousel-caption text-center">
 						<h1>One more for good measure.</h1>

@@ -62,7 +62,7 @@
   </style>
 
 <body id="main">
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark jalan" id="navbarTemplek">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark jalan">
   <a class="navbar-brand logo" href="#">
   <i class="fas fa-cog"></i>SM
   </a>
@@ -76,22 +76,15 @@
 					<a class="nav-link " href="<?= base_url();?>index.php/welcome/utama">Home<span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item active">
-					<a class="nav-link " href="<?= base_url();?>index.php/welcome/utama/#event">Event <span class="sr-only">(current)</span></a>
+					<a class="nav-link " href="<?= base_url();?>index.php/welcome/utama#event">Event <span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item active">
-					<a class="nav-link " href="<?= base_url();?>index.php/welcome/gallery">Gallery <span class="sr-only">(current)</span></a>
+					<a class="nav-link " href="<?= base_url(); ?>index.php/welcome/profil">Profil <span class="sr-only">(current)</span></a>
 				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-					 aria-haspopup="true" aria-expanded="false">
-						About Us
-					</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item a" href="<?= base_url(); ?>index.php/welcome/utama/#cp">Contact</a>
-						<a class="dropdown-item a" href="<?= base_url(); ?>index.php/welcome/profil">My Profil</a>
-    
-					</div>
+				<li class="nav-item active">
+					<a class="nav-link " href="<?= base_url(); ?>index.php/welcome/utama/#cp">Contact <span class="sr-only">(current)</span></a>
 				</li>
+
 			</ul>
 		</div>
 	</nav>
