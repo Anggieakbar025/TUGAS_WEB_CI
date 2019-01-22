@@ -1,0 +1,42 @@
+#salam {
+    margin-top: 20vh !important;
+    margin-bottom: 1vh !important;
+    text-align: center;
+}
+.isi {
+    padding-left: 63vh !important;
+}
+.alert {
+    margin-left: -60vh !important;
+}
+.jalan {
+    font-size: 20px;
+    padding-top: 1px !important;
+    padding-bottom: 1px !important;
+}
+.logo {
+    font-size: 40px;
+    font-family: Ravie;
+}
+.keterangan {
+    margin-top: 20vh !important;
+}
+h1 {
+    font-size: 7vh;   
+}
+.content {
+    padding-top: 10vh;
+    margin-bottom: 10vh;
+}
+.main {
+    margin-top: 10vh !important;
+}
+.bd-placeholder-img{
+    height: 90vh !important;
+}
+.tambahan {
+    margin-bottom: 30vh !important;
+}
+.mainprogram {
+    margin-bottom: 50px;
+}
