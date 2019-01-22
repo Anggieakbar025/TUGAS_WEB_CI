@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+	
+
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -21,13 +23,45 @@
 		<?= $judul;?>
 	</title>
 </head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+		$(document).ready(function () {
+			// Add smooth scrolling to all links
+			$("a").on('click', function (event) {
+
+				// Make sure this.hash has a value before overriding default behavior
+				if (this.hash !== "") {
+					// Prevent default anchor click behavior
+					event.preventDefault();
+
+					// Store hash
+					var hash = this.hash;
+
+					// Using jQuery's animate() method to add smooth page scroll
+					// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+					$('html, body').animate({
+						scrollTop: $(hash).offset().top
+					}, 800, function () {
+
+						// Add hash (#) to URL when done scrolling (default click behavior)
+						window.location.hash = hash;
+					});
+				} // End if
+			});
+			$('button.close')[0].on('click', function(){
+				$(this).css('display', 'none');
+			});
+		});
+
+	</script>
+
 <style>
 	/* body {
       background-image: linear-gradient(to bottom , #ffff99,#ff9999,#ff5050);
     } */
   </style>
 
-<body>
+<body id="main">
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark jalan" id="navbarTemplek">
   <a class="navbar-brand logo" href="#">
   <i class="fas fa-cog"></i>SM
@@ -42,7 +76,7 @@
 					<a class="nav-link " href="<?= base_url();?>index.php/welcome/utama">Home<span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item active">
-					<a class="nav-link " href="<?= base_url();?>index.php/welcome/event">Event <span class="sr-only">(current)</span></a>
+					<a class="nav-link " href="<?= base_url();?>index.php/welcome/utama/#event">Event <span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item active">
 					<a class="nav-link " href="<?= base_url();?>index.php/welcome/gallery">Gallery <span class="sr-only">(current)</span></a>
@@ -53,8 +87,8 @@
 						About Us
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="<?= base_url(); ?>index.php/welcome/contact">Contact</a>
-						<a class="dropdown-item" href="<?= base_url(); ?>index.php/welcome/profil">My Profil</a>
+						<a class="dropdown-item a" href="<?= base_url(); ?>index.php/welcome/utama/#cp">Contact</a>
+						<a class="dropdown-item a" href="<?= base_url(); ?>index.php/welcome/profil">My Profil</a>
     
 					</div>
 				</li>
