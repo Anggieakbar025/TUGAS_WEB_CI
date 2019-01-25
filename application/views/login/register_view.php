@@ -30,12 +30,6 @@
                             </div>
                         <?php endif; ?>
 
-                        <!-- validation messages for taking inputs -->
-                        <?php echo validation_errors('<div class="alert alert-danger alert-dismissible" role="alert">
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span></button>','</div>');
-                        ?>
-
                         <?php echo form_open('Register/registerUser') ?>
 
                             <div class="form-group">
@@ -47,37 +41,37 @@
                             <div class="form-group">
                                 <input type="text" class="form-control" name="fname" id="fname" placeholder="Full Name">
                                 <small class="form-text text-danger">
-					                <?= form_error('username') ?>
+					                <?= form_error('fname') ?>
                                 </small>
                             </div>
                             <div class="form-group">
                                 <input type="email" class="form-control" name="email" id="email" placeholder="Email">
                                 <small class="form-text text-danger">
-					                <?= form_error('username') ?>
+					                <?= form_error('email') ?>
                                 </small>
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control" name="contact" id="contact" placeholder="Contact Number">
                                 <small class="form-text text-danger">
-					                <?= form_error('username') ?>
+					                <?= form_error('contact') ?>
                                 </small>
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control" name="nis" id="nis" placeholder="NIS">
                                 <small class="form-text text-danger">
-					                <?= form_error('username') ?>
+					                <?= form_error('nis') ?>
                                 </small>
                             </div>
                             <div class="form-group">
                                 <input type="password" class="form-control" name="password" id="password" placeholder="Password">
                                 <small class="form-text text-danger">
-					                <?= form_error('username') ?>
+					                <?= form_error('password') ?>
                                 </small>
                             </div>
                             <div class="form-group">
                                 <input type="password" class="form-control" name="cpassword" id="password" placeholder="Password">
                                 <small class="form-text text-danger">
-					                <?= form_error('username') ?>
+					                <?= form_error('cpassword') ?>
                                 </small>
                             </div>
                             <button  class="btn btn-outline-primary">Register</button>                        <a href="<?php echo site_url('Welcome/login') ?>" class="btn btn-link">Sign In</a>

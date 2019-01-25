@@ -41,7 +41,7 @@
                             <div class="form-group">
                                 <input type="password" class="form-control" name="password" id="password" placeholder="Password" value="<?= $this->form_validation->set_value('password'); ?>">
                                 <small class="form-text text-danger">
-					                <?= form_error('username') ?>
+					                <?= form_error('password') ?>
                                 </small>
                             </div>
                             <button type="submit" class="btn btn-outline-primary">LOGIN</button>
