@@ -2,76 +2,52 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Welcome extends CI_Controller {
-
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
-	public function index()
+	public function __construct()
 	{
-		$this->load->view('welcome_message');
-	}
-	
-	public function dashboard($nama, $gender)
-	{
-		$data['judul'] = 'Beranda';
-		$data['nama_lengkap'] = $nama;
-		$data['jenis_kelamin'] = $gender;
+		parent::__construct();
+		$this->load->model('Model_user');
+		$this->load->library('form_validation');
 
-		$this->load->view('template/header', $data);
-		$this->load->view('beranda', $data);
-		$this->load->view('template/footer');
-	}
-
-	public function profil()
-	{
-		$data['judul'] = 'Profil';
-		$this->load->view('template/header', $data);
-		$this->load->view('profil');
-		$this->load->view('template/footer');
+		if ($this->session->userdata('status') != 'logged in') {
+			redirect('Login/index');
+			
+		}
 		
 	}
-	
-	public function utama()
+
+	public function dashboard($nama, $gender)
 	{
-		$data['judul'] = 'Utama';
+		$data['nama_lengkap'] = $nama;
+		$data['jenis_kelamin'] = $gender;
+		$data['judul'] = 'Beranda';
 		$this->load->view('template/header', $data);
-		$this->load->view('utama');
+		$this->load->view('isi/beranda', $data);
+		$this->load->view('template/footer', $data, FALSE);
+		
+	}
+
+	public function index()
+	{
+		$this->load->view('isi/viewprogram');   
+	}
+
+	
+	public function Login()
+	{
+		$this->load->view('login/login_view');
+	}
+	public function home()
+	{
+		$data['judul'] = 'Home';
+		$this->load->view('template/header', $data);
+		$this->load->view('isi/utama');
 		$this->load->view('template/footer');
 	}
-	
-	public function event()
+	public function profil()
 	{
-		$data['judul'] = 'Event';
+		$data['judul'] = 'Home';
 		$this->load->view('template/header', $data);
-		$this->load->view('event');
-		$this->load->view('template/footer');
-	}
-	
-	public function contact()
-	{
-		$data['judul'] = 'Contact';
-		$this->load->view('template/header', $data);
-		$this->load->view('gallery');
-		$this->load->view('template/footer');
-	}
-	
-	public function gallery()
-	{
-		$data['judul'] = 'Gallery';
-		$this->load->view('template/header', $data);
-		$this->load->view('gallery');
+		$this->load->view('isi/profil');
 		$this->load->view('template/footer');
 		
 	}

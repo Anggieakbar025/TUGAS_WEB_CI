@@ -43,14 +43,9 @@
 			<p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text,
 				and add your own fullscreen background photo to make it your own.</p>
 			<p class="lead">
-				<a href="<?= base_url(); ?>index.php/welcome/dashboard/Risdhi/Cowok" class="btn btn-lg btn-secondary">Halaman Utama</a>
+				<a href="<?= base_url(); ?>welcome/dashboard/Risdhi/Cowok" class="btn btn-lg btn-secondary">Halaman Utama</a>
 			</p>
 		</main>
-		<?= $this->uri->segment(1) ?> <br>
-		<?= $this->uri->segment(1) ?> <br>
-		<?= $this->uri->segment(1) ?>
-
-
 		<footer class="mastfoot mt-auto">
 			<div class="inner">
 				<p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>

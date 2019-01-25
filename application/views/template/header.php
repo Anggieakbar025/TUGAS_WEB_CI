@@ -13,7 +13,7 @@
 	 crossorigin="anonymous">
 
 	<!-- My CSS -->
-	<link rel="stylesheet" href="<?= base_url(  ); ?>assets/style.css">
+	<link rel="stylesheet" href="<?= base_url(  ); ?>assets/css/style.css">
 
 	<!-- font-awesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
@@ -73,18 +73,22 @@
 		<div class="collapse navbar-collapse" id="navbarText">
 			<ul class="navbar-nav mr-auto item">
 				<li class="nav-item active">
-					<a class="nav-link " href="<?= base_url();?>index.php/welcome/utama">Home<span class="sr-only">(current)</span></a>
+					<a class="nav-link" href="<?= base_url();?>welcome/home">Home<span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item active">
-					<a class="nav-link " href="<?= base_url();?>index.php/welcome/utama#event">Event <span class="sr-only">(current)</span></a>
+					<a class="nav-link " href="<?= base_url();?>welcome/home#event">Event <span class="sr-only">(current)</span></a>
 				</li>
-				<li class="nav-item active">
-					<a class="nav-link " href="<?= base_url(); ?>index.php/welcome/profil">Profil <span class="sr-only">(current)</span></a>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					About Us
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="<?= base_url('welcome/home/#cp')?>">Contact</a>
+					<a class="dropdown-item" href="<?= base_url('welcome/profil')?>">Profil</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item mb-1" href="<?= base_url('Login/Logout')?>">Log Out</a>
+					</div>
 				</li>
-				<li class="nav-item active">
-					<a class="nav-link " href="<?= base_url(); ?>index.php/welcome/utama/#cp">Contact <span class="sr-only">(current)</span></a>
-				</li>
-
 			</ul>
 		</div>
 	</nav>

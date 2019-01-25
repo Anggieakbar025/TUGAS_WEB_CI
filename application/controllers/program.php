@@ -7,9 +7,14 @@
     
         public function index()
         {   
-            $this->load->view('viewprogram');
+            $this->load->view('isi/viewprogram');
             
         }
+        public function Register()
+        {
+            $this->load->view('login/register_view');
+        }
+    
     
     }
     

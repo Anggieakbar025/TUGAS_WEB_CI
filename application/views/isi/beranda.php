@@ -17,7 +17,7 @@
 	<div class="row tambahan">
 		<div class="isi">
 			<p>
-				<a class="btn btn-primary"  href="<?= base_url();?>index.php/welcome/utama">
+				<a class="btn btn-primary"  href="<?= base_url('Welcome/home')?>">
 					Jump to Home
 				</a>
 				<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false"
